@@ -4,8 +4,7 @@ import unittest
 class VisitTest(unittest.TestCase): # unittest.TestCase를 상속한다
     # 테스트가 시작되기 전 실행되는 메소드
     def setUp(self):
-        path = '/Users/cos/Downloads/chromedriver' # Chrome Driver가 설치되어있는 경로를 지정할것
-        self.browser = webdriver.Chrome(path)
+        self.browser = webdriver.Chrome('./chromedriver')
         self.browser.implicitly_wait(3) # 암묵적 대기 : 불완전한 selenium 모듈을 보조
 
     # 테스트가 끝났을때 실행되는 메소드
